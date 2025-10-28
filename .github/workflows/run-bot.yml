@@ -26,8 +26,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run bot
-        env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
-        working-directory: ${{ github.workspace }}
-        run: python ./dollarpricebot.py
+  working-directory: ./  # указываем корневую папку
+  env:
+    BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+    CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+  run: python dollarpricebot.py
+
