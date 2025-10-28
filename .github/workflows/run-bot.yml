@@ -1,5 +1,6 @@
 name: Run DollarPriceBot
 
+
 on:
   schedule:
     # Запуск каждые 3 часа
